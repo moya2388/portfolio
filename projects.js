@@ -5,7 +5,7 @@ window.PORTFOLIO = {
     {
       id: 'dungeon', number: '01', title: '纸上地牢', en: 'PAPER DUNGEON', category: 'roguelike', type: '卡牌肉鸽 / 随机地牢',
       cover: './assets/dungeon-cover.jpg', coverAlt: '纸上地牢手绘风格宣传封面', coverNote: '宣传封面', file: 'paper-dungeon-windows.zip', size: '102.2 MiB',
-      tags: ['卡牌连携', '随机探索', '手绘纸牌'],
+      tags: ['卡牌连携', '随机探索', '肉鸽'],
       headline: '手牌换位、连携与随机地牢',
       intro: '一款结合卡牌战斗和地牢探索的游戏。战斗中可以换位、连携和合成手牌，探索时在随机房间里收集卡牌、道具和资源。',
       facts: [['玩法', '手牌连携与房间探索'], ['技术', 'Godot / GDScript'], ['版本', 'Windows 试玩版']],
@@ -23,7 +23,7 @@ window.PORTFOLIO = {
     {
       id: 'delay', number: '02', title: 'DELAY', en: '2D PLATFORM PUZZLE', category: 'puzzle', type: '2D 横版 / 时空解谜',
       cover: './assets/delay-village.png', coverAlt: 'DELAY 的像素村庄和空中方块机关', coverNote: '开发画面', file: 'delay-windows.zip', size: '58.9 MiB',
-      tags: ['延迟施力', '机关传导', '关卡工具'],
+      tags: ['延迟施力', '机关传导', '关卡工具', '解谜'],
       headline: '先储存方向力，再用装置释放',
       intro: '一款以延迟施力为主要玩法的横版解谜游戏。先向方块记录方向，再用范围装置触发移动，配合压力门、绳索和联动方块完成关卡。',
       facts: [['玩法', '储力 → 释力 → 传导'], ['技术', 'Godot / GDScript / JSON'], ['流程', '序章、4 个正式关卡与结局']],
@@ -41,7 +41,7 @@ window.PORTFOLIO = {
     {
       id: 'algee', number: '03', title: '阿吉与花海', en: 'ALGEE & BLOOMS', category: 'puzzle', type: 'GameJam / 2D 网格解谜',
       cover: './assets/algee-cover.png', coverAlt: '阿吉与查理在星空花海中的游戏封面', coverNote: '主菜单美术', file: 'algee-and-blooms-windows.zip', size: '42.6 MiB',
-      tags: ['Grow 主题', '路径规划', '关卡教学'],
+      tags: ['Grow 主题', '路径规划', '关卡教学', '解谜'],
       headline: '在有限身长内规划到蓝花的路线',
       intro: '阿吉和守在起点的机器人查理通过管道相连。玩家需要在身长限制内寻找蓝花，途中可以拾取花瓣增加身长，花丛也会随步数扩张并挡住道路。',
       facts: [['项目背景', '2026 YIGUANG Project GameJam'], ['技术', 'Godot / GDScript'], ['内容', '5 个可玩关卡']],
