@@ -8,7 +8,4 @@
 
 /* 按游戏整理制作记录；沿用三栏和手机端单栏布局。 */
 .development-record .step-index span{font-size:9px;letter-spacing:.8px;line-height:1.7}
-.development-record .development-log{list-style:none;margin:22px 0 0;padding:0}
-.development-log li+li{margin-top:24px}
-.development-log h4{font-size:13px;line-height:1.7;font-weight:600;margin:0 0 7px}
-.approach-grid .development-log p{margin:0;font-size:12px;line-height:1.95}
+.development-record > p{margin:20px 0 0;line-height:2}
