@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="墨玡的游戏开发作品集：纸上地牢、DELAY、阿吉与花海。包含玩法介绍、游戏画面、制作记录和 Windows 试玩版。">
+  <meta name="theme-color" content="#f6f4ef">
+  <title>墨玡 · 游戏开发作品集</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./projects.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#works">跳到作品</a>
+  <header class="header wrap">
+    <a class="brand" href="#top" aria-label="墨玡，返回首页"><span class="monogram">M<span>Y</span><i></i></span><span>墨玡<small>GAME PORTFOLIO</small></span></a>
+    <nav aria-label="主导航"><a href="#works">作品</a><a href="#approach">开发思路</a><a href="#about">关于</a></nav>
+    <a class="header-link" href="#downloads">下载试玩 <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="top">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> 玩法 · 关卡 · 开发</p>
+        <h1 id="hero-title">游戏作品，<br>和一些<span class="handline">制作记录<svg viewBox="0 0 500 20" aria-hidden="true"><path d="M5 12 Q210 -1 493 9 M35 18 Q255 6 460 15"/></svg></span>。</h1>
+        <p class="hero-description">你好，我是墨玡。<br>这里放着我参与制作的几款游戏，<br class="desktop-break">包括玩法介绍、游戏画面和一些制作记录。</p>
+        <a class="button primary" href="#works">查看作品 <span aria-hidden="true">↓</span></a>
+        <div class="hero-footnote"><span>03 个可下载作品</span><i></i><span>Godot / GDScript</span></div>
+      </div>
+      <div class="hero-art" aria-label="三个游戏作品画面">
+        <div class="cross cross-one">+</div><div class="cross cross-two">+</div>
+        <div class="art-label">GODOT / GAME PROJECTS</div>
+        <figure class="shot shot-back"><img src="./assets/algee-cover.png" alt="阿吉与花海的星空与角色封面" width="1672" height="941"><figcaption><span>01 / 阿吉与花海</span><span>PUZZLE</span></figcaption></figure>
+        <figure class="shot shot-middle"><img src="./assets/delay-village.png" alt="DELAY 像素村庄与方块机关画面" width="960" height="540"><figcaption><span>02 / DELAY</span><span>TIME & FORCE</span></figcaption></figure>
+        <figure class="shot shot-front"><img src="./assets/dungeon-battle.png" alt="纸上地牢中的手绘纸牌战斗画面" width="1360" height="820"><figcaption><span>03 / 纸上地牢</span><span>ROGUELIKE</span></figcaption></figure>
+        <span class="play-stamp" aria-hidden="true">GAME<br>NOTES <span>↗</span></span>
+      </div>
+    </section>
+    <div class="ticker" aria-hidden="true"><div class="wrap"><span>GAME DESIGN</span><i>✳</i><span>LEVEL DESIGN</span><i>✳</i><span>PROTOTYPING</span><i>✳</i><span>GDSCRIPT</span></div></div>
+    <section id="works" class="works wrap" aria-labelledby="works-title">
+      <div class="section-head"><div><p class="eyebrow">01 / PROJECTS</p><h2 id="works-title">目前整理的三个作品</h2></div><p class="section-note">点击查看介绍和画面，<br>也可以下载试玩。</p></div>
+      <div class="filter-bar"><div class="filters" role="group" aria-label="筛选作品"><button type="button" class="filter active" data-filter="all" aria-pressed="true">全部作品 <span>03</span></button><button type="button" class="filter" data-filter="puzzle" aria-pressed="false">解谜探索 <span>02</span></button><button type="button" class="filter" data-filter="roguelike" aria-pressed="false">卡牌肉鸽 <span>01</span></button></div><span class="filter-result" aria-live="polite">3 个项目</span></div>
+      <div id="project-grid" class="project-grid"></div>
+      <noscript><p>请启用 JavaScript 查看项目详情。你仍可在下方直接下载三个作品。</p></noscript>
+    </section>
+    <section id="approach" class="approach" aria-labelledby="approach-title"><div class="wrap">
+      <div class="section-head"><div><p class="eyebrow">02 / DEVELOPMENT NOTES</p><h2 id="approach-title">制作过程中的一些记录</h2></div></div>
+      <div class="approach-grid">
+        <article><span class="step-index">01 <span>↗</span></span><h3>玩法规则</h3><p>《阿吉与花海》围绕有限身长和花丛生长安排路线；《DELAY》的方块先记录方向力，再由装置触发移动。</p><span class="quiet-tag">身长与路径 / 储力与释放</span></article>
+        <article><span class="step-index">02 <span>↗</span></span><h3>关卡安排</h3><p>《阿吉与花海》的五关依次加入移动、花瓣、障碍与生长机关；《DELAY》在四关中逐步加入压力门、绳索和联动方块。</p><span class="quiet-tag">关卡顺序 / 机制组合</span></article>
+        <article><span class="step-index">03 <span>↗</span></span><h3>制作与调整</h3><p>《DELAY》用关卡编辑器调整布局，《纸上地牢》通过内容库管理卡牌和道具。修改规则和数值后，再回到游戏里检查效果。</p><span class="quiet-tag">Godot / GDScript / 数据配置</span></article>
+      </div>
+    </div></section>
+    <section id="about" class="about wrap" aria-labelledby="about-title"><div><p class="eyebrow">03 / ABOUT</p><h2 id="about-title">墨玡<span>游戏作品与制作记录</span></h2></div><div class="about-copy"><p>目前主要使用 Godot 和 GDScript 制作游戏。这里整理了几款参与制作的项目，方便查看和试玩。</p><p>三个项目分别是网格解谜、横版机关解谜和卡牌地牢。除了游戏画面，也记下了一些规则的做法和制作时的调整。</p><div class="skill-tags"><span>玩法设计</span><span>关卡设计</span><span>交互原型</span><span>Godot</span><span>GDScript</span></div></div></section>
+    <section id="downloads" class="downloads wrap" aria-labelledby="download-title"><div class="download-intro"><p class="eyebrow">DOWNLOADS</p><h2 id="download-title">Windows 试玩版</h2><p>Windows 试玩版 · 下载后完整解压运行</p></div><div class="download-list"><a class="download-row" data-download="dungeon" href="./downloads/paper-dungeon-windows.zip" download><span><strong>纸上地牢</strong><small>卡牌肉鸽 · ZIP / 102.2 MiB</small></span><span aria-hidden="true">↓</span></a><a class="download-row" data-download="delay" href="./downloads/delay-windows.zip" download><span><strong>DELAY</strong><small>横版解谜 · ZIP / 58.9 MiB</small></span><span aria-hidden="true">↓</span></a><a class="download-row" data-download="algee" href="./downloads/algee-and-blooms-windows.zip" download><span><strong>阿吉与花海</strong><small>网格解谜 · ZIP / 42.6 MiB</small></span><span aria-hidden="true">↓</span></a><p class="download-note">当前提供 Windows 下载版，非浏览器在线试玩。<br>《纸上地牢》解压后请保持 EXE 与 PCK 文件在同一目录。</p></div></section>
+  </main>
+  <footer class="footer wrap"><span>墨玡 <span class="muted">/ 游戏开发作品集</span></span><span class="muted">感谢浏览。</span><a href="#top">回到顶部 ↑</a></footer>
+  <dialog id="project-dialog" class="project-dialog" aria-labelledby="dialog-title"><div class="dialog-shell"><div class="dialog-top"><span class="eyebrow">PROJECT NOTES</span><button type="button" class="icon-button close-dialog" aria-label="关闭项目详情">✕</button></div><div id="dialog-content"></div></div></dialog>
+</body>
+</html>

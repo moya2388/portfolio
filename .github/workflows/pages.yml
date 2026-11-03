@@ -1,0 +1,55 @@
+name: Publish portfolio to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check game download assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view games --json assets > "$RUNNER_TEMP/game-assets.json"
+          node --input-type=module -e '
+            import fs from "node:fs";
+            const data = JSON.parse(fs.readFileSync(process.env.RUNNER_TEMP + "/game-assets.json", "utf8"));
+            const names = new Set(data.assets.map(asset => asset.name));
+            for (const file of ["paper-dungeon-windows.zip", "delay-windows.zip", "algee-and-blooms-windows.zip"]) {
+              if (!names.has(file)) throw new Error("请先将游戏包上传到标签为 games 的 Release：" + file);
+            }
+          '
+      - name: Build static portfolio
+        run: node scripts/build-pages.mjs
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .pages
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

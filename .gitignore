@@ -1,0 +1,8 @@
+# 游戏包通过 GitHub Releases 发布，避免超过 GitHub 的单文件限制。
+downloads/
+.preview-game/
+.pages/
+.qa/
+notes/
+*.zip
+__pycache__/
