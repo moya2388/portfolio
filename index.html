@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="墨玡的游戏开发作品集：纸上地牢、DELAY、阿吉与花海。包含玩法介绍、游戏画面、制作记录和 Windows 试玩版。">
+  <meta name="description" content="墨玡的游戏开发作品集：纸上地牢、DELAY、阿吉与花海。包含玩法介绍、游戏画面、设计思路和 Windows 试玩版。">
   <meta name="theme-color" content="#f6f4ef">
   <title>墨玡 · 游戏开发作品集</title>
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
@@ -15,15 +15,15 @@
   <a class="skip-link" href="#works">跳到作品</a>
   <header class="header wrap">
     <a class="brand" href="#top" aria-label="墨玡，返回首页"><span class="monogram">M<span>Y</span><i></i></span><span>墨玡<small>GAME PORTFOLIO</small></span></a>
-    <nav aria-label="主导航"><a href="#works">作品</a><a href="#approach">制作记录</a><a href="#about">关于</a></nav>
+    <nav aria-label="主导航"><a href="#works">作品</a><a href="#approach">设计思路</a><a href="#about">关于</a></nav>
     <a class="header-link" href="#downloads">下载试玩 <span aria-hidden="true">↗</span></a>
   </header>
   <main id="top">
     <section class="hero wrap" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow"><span class="status-dot"></span> 玩法 · 关卡 · 开发</p>
-        <h1 id="hero-title">游戏作品，<br>和一些<span class="handline">制作记录<svg viewBox="0 0 500 20" aria-hidden="true"><path d="M5 12 Q210 -1 493 9 M35 18 Q255 6 460 15"/></svg></span>。</h1>
-        <p class="hero-description">你好，我是墨玡。<br>这里放着我参与制作的几款游戏，<br class="desktop-break">包括玩法介绍、游戏画面和一些制作记录。</p>
+        <h1 id="hero-title">游戏作品，<br>和一些<span class="handline">设计思路<svg viewBox="0 0 500 20" aria-hidden="true"><path d="M5 12 Q210 -1 493 9 M35 18 Q255 6 460 15"/></svg></span>。</h1>
+        <p class="hero-description">你好，我是墨玡。<br>这里放着我参与制作的几款游戏，<br class="desktop-break">包括玩法介绍、游戏画面和一些设计思路。</p>
         <a class="button primary" href="#works">查看作品 <span aria-hidden="true">↓</span></a>
         <div class="hero-footnote"><span>03 个可下载作品</span><i></i><span>Godot / GDScript</span></div>
       </div>
@@ -44,35 +44,35 @@
       <noscript><p>请启用 JavaScript 查看项目详情。你仍可在下方直接下载三个作品。</p></noscript>
     </section>
     <section id="approach" class="approach" aria-labelledby="approach-title"><div class="wrap">
-      <div class="section-head"><div><p class="eyebrow">02 / DEVELOPMENT NOTES</p><h2 id="approach-title">制作过程中的一些记录</h2></div><p class="section-note">按项目整理，<br>记录做法和调整。</p></div>
+      <div class="section-head"><div><p class="eyebrow">02 / DESIGN NOTES</p><h2 id="approach-title">各个游戏的设计思路</h2></div><p class="section-note">关于玩法、关卡，<br>以及其中的选择。</p></div>
       <div class="approach-grid">
         <article class="development-record" aria-labelledby="dungeon-notes-title">
           <span class="step-index">01 <span>卡牌肉鸽</span></span><h3 id="dungeon-notes-title">纸上地牢</h3>
           <ol class="development-log">
-            <li><h4>手牌与内容库</h4><p>战斗中加入了手牌换位、连携和竖向合成。卡牌、敌人、道具分别放进内容库，新增内容或调整数值时，可以修改对应资源。</p></li>
-            <li><h4>特殊房间的路径调整</h4><p>抽奖房和奇遇房曾有机会挡在通往其他特殊房间的路上。后来限制了它们的生成位置；没有合适位置时补一条支路，同时为隐藏房预留入口。</p></li>
-            <li><h4>隐藏房的发现状态</h4><p>微光抵达隐藏墙后，会在本层保留发现状态。玩家可以先离开，回来再炸墙或开锁。跟随途中走错房间，指引仍会失效。</p></li>
+            <li><h4>牌序与连携</h4><p>手牌可以换位，同名牌可以连携或合成。除了决定打哪张牌，也需要考虑牌的位置，以及组合后的效果能怎样应对当前的敌人。</p></li>
+            <li><h4>路线与资源选择</h4><p>玩家根据当前的生命、卡牌和资源，选择接下来要进入的房间。特殊房间分开安排，避免为了到达一间特殊房而被迫先经过另一间。</p></li>
+            <li><h4>隐藏房与探索</h4><p>隐藏房通过微光给出线索。找到隐藏墙后，可以先去准备炸弹或钥匙，再回来开启，让发现位置和付出资源成为两个选择。</p></li>
           </ol>
         </article>
         <article class="development-record" aria-labelledby="delay-notes-title">
           <span class="step-index">02 <span>横版解谜</span></span><h3 id="delay-notes-title">DELAY</h3>
           <ol class="development-log">
             <li><h4>机关既是“锁”，也是“钥匙”</h4><p>升降门与互动方块既是阻挡道路、限制位置的“锁”，也能作为开启通道、搭建跳跃平台的“钥匙”。玩家需要理解力量的滞后释放、执行顺序等规则，判断同一机关在不同状态下的用途，并利用机制之间的组合关系完成解谜。</p></li>
-            <li><h4>边编辑边试玩</h4><p>关卡编辑器可以布置方块、连接压力门、设置镜头区域和联动组，也可以调整参数、保存关卡。编辑和试玩可以直接切换，方便修改谜题后检查效果。</p></li>
-            <li><h4>回档保存谜题状态</h4><p>检查点不只记录玩家位置，也保存方块位置、储力队列、装置和绳索的状态。单步操作可以回撤，整段谜题也可以从检查点重新尝试。</p></li>
+            <li><h4>先规划，再释放</h4><p>方向力不会立即生效，需要用装置释放。玩家可以先安排方向和顺序，再考虑装置会覆盖哪些方块，观察一次触发后各个机关之间的影响。</p></li>
+            <li><h4>给尝试留一些余地</h4><p>谜题需要反复尝试，才能看清机关之间的关系。回撤和检查点让玩家可以验证自己的判断，走错之后重新安排操作，继续尝试其他解法。</p></li>
           </ol>
         </article>
         <article class="development-record" aria-labelledby="algee-notes-title">
           <span class="step-index">03 <span>GameJam 解谜</span></span><h3 id="algee-notes-title">阿吉与花海</h3>
           <ol class="development-log">
-            <li><h4>把规则放进五个关卡</h4><p>早期计划做八关，后来在 GameJam 的时间内收敛为五关。依次介绍移动、花瓣增益、静态障碍和花丛生长，最后一关再组合多个生长机关。</p></li>
-            <li><h4>补上生长倒计时</h4><p>界面后来补上了“距花丛生长”的步数，每次移动或截断管道后都会更新。没有生长机关的关卡会隐藏这一项，关卡名称也一并显示在顶部。</p></li>
-            <li><h4>剧情与结算的衔接</h4><p>制作后期补上了“下一关”入口，最后一关结束后回到选关页。选关列表和下一关使用相同顺序，也修正了剧情结束后结算面板不显示的问题。</p></li>
+            <li><h4>两种方向的生长</h4><p>围绕 Grow 主题，花瓣增加身长，让阿吉走得更远；花丛随步数扩张，让能走的路越来越少。绕路拾取花瓣时，也要考虑会不会来不及通过。</p></li>
+            <li><h4>身长与路线</h4><p>踏回已有管道可以截断身体，重新分配有限的身长。路线不只要能到终点，还要考虑花瓣的位置，以及花丛下一次生长会堵住哪里。</p></li>
+            <li><h4>逐步介绍规则</h4><p>五个关卡依次介绍移动、花瓣、障碍和花丛生长，最后再组合多个机关。每次先认识一条规则，再把它和前面学过的规则一起使用。</p></li>
           </ol>
         </article>
       </div>
     </div></section>
-    <section id="about" class="about wrap" aria-labelledby="about-title"><div><p class="eyebrow">03 / ABOUT</p><h2 id="about-title">墨玡<span>游戏作品与制作记录</span></h2></div><div class="about-copy"><p>目前主要使用 Godot 和 GDScript 制作游戏。这里整理了几款参与制作的项目，方便查看和试玩。</p><p>三个项目分别是网格解谜、横版机关解谜和卡牌地牢。除了游戏画面，也记下了一些规则的做法和制作时的调整。</p><div class="skill-tags"><span>玩法设计</span><span>关卡设计</span><span>交互原型</span><span>Godot</span><span>GDScript</span></div></div></section>
+    <section id="about" class="about wrap" aria-labelledby="about-title"><div><p class="eyebrow">03 / ABOUT</p><h2 id="about-title">墨玡<span>游戏作品与设计思路</span></h2></div><div class="about-copy"><p>目前主要使用 Godot 和 GDScript 制作游戏。这里整理了几款参与制作的项目，方便查看和试玩。</p><p>三个项目分别是网格解谜、横版机关解谜和卡牌地牢。除了游戏画面，也写了一些玩法和关卡上的考虑。</p><div class="skill-tags"><span>玩法设计</span><span>关卡设计</span><span>交互原型</span><span>Godot</span><span>GDScript</span></div></div></section>
     <section id="downloads" class="downloads wrap" aria-labelledby="download-title"><div class="download-intro"><p class="eyebrow">DOWNLOADS</p><h2 id="download-title">Windows 试玩版</h2><p>Windows 试玩版 · 下载后完整解压运行</p></div><div class="download-list"><a class="download-row" data-download="dungeon" href="./downloads/paper-dungeon-windows.zip" download><span><strong>纸上地牢</strong><small>卡牌肉鸽 · ZIP / 102.2 MiB</small></span><span aria-hidden="true">↓</span></a><a class="download-row" data-download="delay" href="./downloads/delay-windows.zip" download><span><strong>DELAY</strong><small>横版解谜 · ZIP / 58.9 MiB</small></span><span aria-hidden="true">↓</span></a><a class="download-row" data-download="algee" href="./downloads/algee-and-blooms-windows.zip" download><span><strong>阿吉与花海</strong><small>网格解谜 · ZIP / 42.6 MiB</small></span><span aria-hidden="true">↓</span></a><p class="download-note">当前提供 Windows 下载版，非浏览器在线试玩。<br>《纸上地牢》解压后请保持 EXE 与 PCK 文件在同一目录。</p></div></section>
   </main>
   <footer class="footer wrap"><span>墨玡 <span class="muted">/ 游戏开发作品集</span></span><span class="muted">感谢浏览。</span><a href="#top">回到顶部 ↑</a></footer>
