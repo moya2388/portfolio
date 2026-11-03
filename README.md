@@ -1,5 +1,7 @@
 # 墨玡 · 游戏开发作品集
 
+[在线查看作品集](https://moya2388.github.io/portfolio/) · [下载 Windows 试玩版](https://github.com/moya2388/portfolio/releases/tag/games)
+
 静态网页，无需安装前端依赖，适合 GitHub Pages 免费托管。
 
 ## 本地查看
